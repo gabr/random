@@ -50,7 +50,7 @@ int main(void) {
             buf[i] = c;
             c = getchar();
             if (c == EOF) break;
-            if ( (!isalpha(c) && c != '_')) {
+            if ( (!isalnum(c) && c != '_')) {
                 while (isspace(c)) c = getchar();
                 if (c != '(') i = BUFSIZ; // check if it's a function
                 break;
