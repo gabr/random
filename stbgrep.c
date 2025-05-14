@@ -1,5 +1,7 @@
 ///usr/bin/env cc "$0" -o a.out && ./a.out -- "$@"; exit
 /*
+    2025.05.14 (Wednesday)
+
     My own attempt at writing a small C program that counts
     stb functions usages - inspired by:
     https://youtu.be/eAhWIO1Ra6M?si=gBvIX6GAxrXObqDY&t=3348
@@ -21,6 +23,14 @@
 
     Usage:
         cat ~/code/nothings/stb/stb*_*.h | ./stbgrep.c | sort -n
+
+    To be fair.  It took me longer than Sean to write this - approx 1.5h
+    But not because I had problems or bugs, but rather because the mindset in C
+    is different and I don't to this often so I'm not that familiar with
+    standard library functions that are useful when writing this type of code.
+
+    I wonder if with practice I could improve to a point to make it reasonable
+    efficient - let's say to get down to 5-15 mins for such programs.
 */
 #include <stdio.h>
 #include <stdlib.h>
