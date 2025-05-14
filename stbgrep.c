@@ -73,7 +73,7 @@ int main(void) {
         if (!(e = hsearch((ENTRY){fname}, FIND))) {
             if (ei >= HTSIZ) {
                 if (ei == HTSIZ) {
-                    fprintf(stderr, "Canno't fit any more entries at %zu\n", ei);
+                    fprintf(stderr, "Cannot fit any more entries at %zu\n", ei);
                     ei = -1; // don't print the message next time
                 }
                 continue;
