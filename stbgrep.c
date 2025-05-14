@@ -49,10 +49,9 @@ int main(void) {
         for (i = 0; i < BUFSIZ; i++) {
             buf[i] = c;
             c = getchar();
-            if (c == EOF) break;
-            if ( (!isalnum(c) && c != '_')) {
+            if ((!isalnum(c) && c != '_')) {
                 while (isspace(c)) c = getchar();
-                if (c != '(') i = BUFSIZ; // check if it's a function
+                if (c == EOF || c != '(') i = BUFSIZ; // check if it's a function
                 break;
             }
         }
