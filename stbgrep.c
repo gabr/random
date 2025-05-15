@@ -26,7 +26,7 @@
 
     To be fair.  It took me longer than Sean to write this - approx 1.5h
     But not because I had problems or bugs, but rather because the mindset in C
-    is different and I don't to this often so I'm not that familiar with
+    is different and I don't do this often so I'm not that familiar with
     standard library functions that are useful when writing this type of code.
 
     I wonder if with practice I could improve to a point to make it reasonable
@@ -54,7 +54,7 @@ int main(void) {
     char buf[BUFSIZ];
     hcreate(HTSIZ);
     while ((c = getchar()) != EOF) {
-        if (!isalpha(c)) continue; // skip util a regular character is found
+        if (!isalpha(c)) continue; // skip until a regular character is found
         // copy the found token name into the buffer but detect if that's a function name
         for (i = 0; i < BUFSIZ; i++) {
             buf[i] = c;
