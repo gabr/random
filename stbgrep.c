@@ -69,8 +69,7 @@ int main(void) {
         buf[i] = 0;
         if (i < 3 || strncmp(buf, "stb", 3)) continue; // not an stb function
         // now put the function name into the hash table and incremente it's counter
-        fname = strdup(buf);
-        if (!(e = hsearch((ENTRY){fname}, FIND))) {
+        if (!(e = hsearch((ENTRY){buf}, FIND))) {
             if (ei >= HTSIZ) {
                 if (ei == HTSIZ) {
                     fprintf(stderr, "Cannot fit any more entries at %zu\n", ei);
@@ -78,6 +77,7 @@ int main(void) {
                 }
                 continue;
             }
+            fname = strdup(buf);
             assert(e = hsearch((ENTRY){fname,(void*)0}, ENTER));
             entries[ei++] = fname;
         }
