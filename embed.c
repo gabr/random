@@ -41,7 +41,7 @@ extern const char name[];                 \
 extern const size_t name ## _siz;         \
 
 // embed itself as a demonstration
-EMBED("embedfile.c", selfbytes);
+EMBED("embed.c", selfbytes);
 
 int main(void) {
     size_t i;
