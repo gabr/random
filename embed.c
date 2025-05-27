@@ -35,7 +35,7 @@ asm (                                     \
     ".quad " #name "_end - " #name "-1\n" \
     ".balign 4\n"                         \
     /* restore section */                 \
-    ".section \".text\"\n"                \
+    ".section .text\n"                    \
 );                                        \
 extern const char name[];                 \
 extern const size_t name ## _siz;         \
